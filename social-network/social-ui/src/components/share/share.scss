@@ -1,0 +1,92 @@
+@import "../../App.scss";
+
+.share-sh{
+    @include themify($themes){
+        -webkit-box-shadow: 0px 0px 25px -10px rgba(0,0,0,0.38);
+        -moz-box-shadow: 0px 0px 25px -10px rgba(0,0,0,0.38);
+        box-shadow: 0px 0px 25px -10px rgba(0,0,0,0.38);
+        border-radius: 20px;
+        background-color: themed("bg");
+        color: themed("textColor");
+        margin-block-end: 15px;
+.container-sh{
+    padding: 20px;
+    @include mobile{
+        padding: 0px;
+    }
+
+}
+.user-sh{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.left-sh{
+    display: flex;
+    align-items: center;
+    flex: 3;
+}
+.left-sh input{
+    inline-size: 60%;
+    border: none;
+    outline: none;
+    padding: 20px 10px;
+    background-color: transparent;
+    color: themed("textColor");
+}
+.left-sh img{
+    inline-size: 35px;
+    block-size: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.right-sh{
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+} 
+
+
+.file{
+
+    inline-size: 100px;
+    block-size: 100px;
+    object-fit: cover;
+}
+
+.share{
+    margin-block-start: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.share button{
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 2px;
+    background-color: #5271ff;
+    padding: 4px;
+    font-size: 16px;
+}
+
+.additional-sh{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.item-sh{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.item-sh img{
+    inline-size: 20px;
+    block-size: 20px;
+    object-fit: cover;
+}
+.item-sh span{
+    font-size: 15px;
+}
+}
+}

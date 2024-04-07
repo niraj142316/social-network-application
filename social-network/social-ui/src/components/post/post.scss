@@ -1,0 +1,96 @@
+@import "../../App.scss";
+
+.post-p{
+    @include themify($themes){
+
+        -webkit-box-shadow: 0px 0px 25px -10px rgba(0,0,0,0.38);
+        -moz-box-shadow: 0px 0px 25px -10px rgba(0,0,0,0.38);
+        box-shadow: 0px 0px 25px -10px rgba(0,0,0,0.38);
+        border-radius: 20px;
+        background-color: themed("bg");
+        color: themed("textColor");
+    .container-p{
+        padding: 20px;
+        @include mobile{
+            padding: 0px;
+        }
+    }
+
+    .user-p{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include mobile{
+            padding: 10px;
+        }
+
+    }
+    .userInfo-p{
+        display: flex;
+        gap: 20px;
+    }
+    .userInfo-p img{
+        inline-size: 40px;
+        block-size: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+
+    }
+
+    .details-p{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+
+    .name-p{
+        font-weight: 500;
+    }
+    .date-p{
+        font-size: 12px;
+    }    
+
+    .content-p{
+        margin: 10px 0px;
+
+        @include mobile{
+            padding: 10px;
+            margin: 0px;
+        }
+        img{
+            inline-size: 100%;
+            max-block-size: 500px;
+            object-fit: cover;
+            margin-block-start: 20px;
+        }
+    }
+
+    .info-p{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 70px;
+
+        @include mobile{
+            gap: 40px;
+        }
+
+        .item-p{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 5px;
+            font-size: 15px;
+
+            @include mobile{
+                font-size: 12px;
+                gap: 0;
+            }
+    
+        }
+    }
+    }
+}

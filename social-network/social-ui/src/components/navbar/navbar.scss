@@ -1,0 +1,80 @@
+@import "../../App.scss";
+
+.navbar{
+    @include themify($themes){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-block-end: 1px solid themed("border");
+    block-size: 40px;
+    position: sticky;
+    z-index: 2;
+    inset-block-start: 0;
+    background-color: themed("bg");
+    color: themed("textColor");
+    
+    .left-n{
+        display: flex;
+        align-items: center;     
+        gap: 20px;
+        cursor: pointer;
+        @include mobile{
+            gap: 35px;
+        }
+}
+.left-n button{
+    border: none;
+    background-color: transparent;
+}
+.left-n span{
+    font-weight: bold;
+    font-size: 20px;
+    color: themed("logo");
+}
+.search-n {
+    display: flex;
+    align-items: center;
+    border-block-end: 1px solid themed("border");
+    gap: 10px;
+    padding: 3px;
+    cursor: pointer;
+}
+.search-n input{
+    inline-size: 400px;
+    border: none;
+    padding: 2px;
+    background-color: transparent;
+    color: themed("textColor");
+
+    @include mobile{
+        display: none;
+    }
+}
+
+.right-n{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+
+    @include mobile{
+        display: none;
+    }
+}
+.user-n{
+    display: flex;
+    gap: 10px;
+    font-weight: bold;
+}
+.user-n img{
+    inline-size: 28px;
+    block-size: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.user-n span{
+    font-size: 20px;
+}
+}
+}

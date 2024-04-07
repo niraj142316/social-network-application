@@ -1,0 +1,127 @@
+@import '../../App.scss';
+
+.profile-pr{
+    @include themify($themes){
+        background-color: themed("bgSoft");
+        
+        .images-pr{
+            inline-size: 100%;
+            block-size: 200px;
+            position: relative;
+
+            .cover{
+                inline-size: 100%;
+                block-size: 100%;
+                object-fit: cover;
+            }
+            .profilePic{
+                inline-size: 200px;
+                block-size: 200px;
+                border-radius: 50%;
+                object-fit: cover;
+                position: absolute;
+                inset-inline-start: 0;
+                inset-inline-end: 0;
+                inset-block-start: 100px;
+                margin: 0px auto;
+            }
+        }
+
+        .profileContainer-pr{
+            padding: 20px 60px;
+
+            @include mobile{
+                padding: 0px;
+            }
+        }
+        
+        .info-pr{
+            margin-block-end: 10px;
+            block-size: 180px;
+            -webkit-box-shadow: 0px 0px 25px -10px rgba(0,0,0,0.38);
+            -moz-box-shadow: 0px 0px 25px -10px rgba(0,0,0,0.38);
+            box-shadow: 0px 0px 25px -10px rgba(0,0,0,0.38);
+            border-radius: 20px; 
+            background-color: themed('bg');
+            color: themed('textColor');
+            padding: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @include mobile{
+                flex-direction: column;
+                block-size: 30vh;
+                padding: 20px;
+                margin-block-start: 100px;
+            }
+        }
+
+        .left-pr{
+            flex: 1;
+            display: flex;
+            gap: 10px;
+
+            @include mobile{
+                gap: 40px;
+            }
+
+            a{
+                color: themed("textColorSoft");
+            }
+        }
+
+        .center-pr{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            span{
+                font-size: 30px;
+                font-weight: bold;
+            }
+
+        }
+
+        .ctr-info{
+            inline-size: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            @include mobile{
+                gap: 170px;
+            }
+        }
+
+        .ctr-item{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: themed('textColorSoft');
+            span{
+                font-size: 14px;
+            }
+
+        }
+        button{
+            border: none;
+            background-color: #5271ff;
+            color: white;
+            padding: 5px 14px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .right-pr{
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 10px;
+            @include mobile{
+                gap: 240px;
+            }
+        }
+    }
+}

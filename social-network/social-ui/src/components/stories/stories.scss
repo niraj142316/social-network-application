@@ -1,0 +1,81 @@
+@import "../../App.scss";
+
+.stories-s{
+    display: flex;
+    gap: 10px;
+    block-size: 200px;
+    margin-block-end: 30px; 
+    @include mobile{
+        block-size: 50px;
+        margin-block-end: 10px; 
+    };
+}
+.story-s{
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    @include mobile{
+        flex: none;
+        inset-inline-start: 10px;
+    }
+}
+.story-s img{
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+    @include mobile{
+        flex: none;
+        inline-size: 50px;
+        block-size: 50px;
+        border-radius: 50%;
+    }
+}
+
+
+.user-s{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    inset-block-end: 10px;
+    inset-inline-start: 5px;
+    gap: 4px;
+}
+
+.user-s img{
+    inline-size: 20px;
+    block-size: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.user-s span{
+    color: white;
+    font-weight: 500;
+    font-size: 13px;
+    @include mobile{
+        display: none;
+    };
+};
+
+.user-s button{
+    position: absolute;
+    inset-block-end: 80px;
+    inset-inline-start: 35px;
+    color: white;
+    background-color: #5271ff;
+    border: none;
+    border-radius: 50%;
+    inline-size: 30px;
+    block-size: 30px;
+    cursor: pointer;
+    font-size: 15px;
+
+    @include mobile{
+        inset-inline-start: 10px;
+        inset-inline-end: 0;
+        inset-block-end: 5px;
+        inline-size: 20px;
+        block-size: 20px;
+    };
+
+}

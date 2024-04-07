@@ -1,0 +1,12 @@
+@import "../../App.scss";
+
+.container-h{
+    @include themify($themes){
+        background-color: themed("bg");
+        padding: 20px 70px;
+        @include mobile{
+            padding: 0px;
+            padding-block-start: 10px;
+        }
+    }
+}
